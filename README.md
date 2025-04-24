@@ -18,7 +18,7 @@ A modern and responsive React web application for browsing categorized restauran
 
 ## 🎥 Cheko Preview
 
-![Cheko Frontend Preview](./cheko-demo-preview.gif)
+https://github.com/user-attachments/assets/4443f4e1-e81b-44f1-9405-0037781dd7fd
 
 ---
 
