@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import HomePage from './pages/HomePage';
+import MapPage from './pages/MapPage';
+import './styles/globals.css';
+import './styles/theme.css';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [currentTab, setCurrentTab] = useState('home'); // 'home' or 'map'
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {currentTab === 'home' ? (
+        <HomePage
+          isDarkMode={isDarkMode}
+          toggleDarkMode={toggleDarkMode}
+          currentTab={currentTab}
+          setCurrentTab={setCurrentTab}
+        />
+      ) : (
+        <MapPage
+          isDarkMode={isDarkMode}
+          toggleDarkMode={toggleDarkMode}
+          currentTab={currentTab}
+          setCurrentTab={setCurrentTab}
+        />
+      )}
+    </>
   );
 }
 

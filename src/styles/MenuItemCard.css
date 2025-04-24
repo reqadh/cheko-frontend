@@ -1,0 +1,84 @@
+.menu-card {
+  display: flex;
+  background-color: var(--card-bg-color);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.menu-image-container {
+  position: relative;
+}
+
+.menu-image {
+  width: 139px;
+  height: 139px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.best-sale {
+  display: inline-block;
+  background-color: #CDE9DC;
+  color: #222;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+
+.menu-details {
+  margin-left: 16px;
+  flex: 1;
+}
+
+.menu-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu-calories {
+  margin: 4px 0;
+  color: gray;
+}
+
+.menu-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.menu-price {
+  color: #F4CBDF;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 8px;
+}
+
+.menu-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  background-color: #F4CBDF;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 6px 12px;
+  color: black;
+  cursor: pointer;
+}
+
+.qty-number {
+  min-width: 16px;
+  text-align: center;
+}
