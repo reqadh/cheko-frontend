@@ -30,6 +30,7 @@ const MapPage = ({ isDarkMode, toggleDarkMode, currentTab, setCurrentTab }) => {
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [46.6510, 24.6359],
       zoom: 13
+      
     });
   }, []);
 
